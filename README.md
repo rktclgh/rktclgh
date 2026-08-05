@@ -1,122 +1,108 @@
 <div align="center">
 
-# Chiho Song
+# Hi, I'm Chiho 👋
 
-### Backend Engineer building reliable AI-powered products.
+### Backend Engineer · Building reliable AI-powered products
 
-**신뢰할 수 있는 AI 기반 제품을 만드는 백엔드 개발자 송치호입니다.**
+I build backend systems across APIs, data, realtime communication, infrastructure, and AI integration.<br/>
+Kotlin과 Spring Boot를 중심으로, AI 기능이 실제 제품 안에서 안정적으로 동작하도록 만듭니다.
 
-[Portfolio](https://www.rktclgh.site) · [Resume](https://www.rktclgh.site/resume) · [LinkedIn](https://www.linkedin.com/in/%EC%B9%98%ED%98%B8-%EC%86%A1-63b791390/)
+<a href="https://www.rktclgh.site"><img src="https://img.shields.io/badge/View_Portfolio-111827?style=for-the-badge&logo=readme&logoColor=white" alt="Portfolio"/></a>
+<a href="https://www.rktclgh.site/resume"><img src="https://img.shields.io/badge/View_Resume-374151?style=for-the-badge&logo=googledocs&logoColor=white" alt="Resume"/></a>
+<a href="https://www.linkedin.com/in/%EC%B9%98%ED%98%B8-%EC%86%A1-63b791390/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 
 </div>
 
----
+## What I'm building | 현재 만들고 있는 것
 
-## About | 소개
+### [Ieum · 이음](https://ieum.rktclgh.site)
 
-I build backend systems with **Kotlin, Java, and Spring Boot**. My work spans API and domain design, authentication and session security, data-intensive workflows, real-time communication, deployment and operations, and the integration of RAG and LLM capabilities into real products.
+> A location-based community where AI answers first and people make the knowledge better.
+>
+> AI가 먼저 답하고, 사람의 경험이 더 나은 지역 지식으로 이어지는 위치 기반 커뮤니티입니다.
 
-**Kotlin, Java, Spring Boot**를 중심으로 API와 도메인 설계, 인증·세션 보안, 데이터 처리, 실시간 통신, 배포와 운영까지 연결하는 백엔드 시스템을 개발합니다. AI는 별도의 데모가 아니라 제품의 일부라는 관점에서 **RAG, 벡터 검색, LLM API**를 기존 백엔드 흐름에 통합해 왔습니다.
+Ieum is a community platform for international residents in Korea. As team lead and backend developer, I designed a system that separates REST, WebSocket, and SSE workloads from AI inference, while combining geospatial search, vector retrieval, and trusted community knowledge.
 
-> I care about explicit system boundaries, observable failure paths, and improvements verified with data.  
-> 명확한 시스템 경계, 추적 가능한 실패 경로, 수치로 검증되는 개선을 중요하게 생각합니다.
+이음은 한국 거주 외국인을 위한 위치 기반 커뮤니티입니다. 팀장 및 백엔드 개발자로서 REST·WebSocket·SSE를 처리하는 서비스와 AI 추론을 분리하고, 위치 검색·벡터 검색·검증된 커뮤니티 지식을 결합하는 백엔드를 설계했습니다.
 
----
+- Split realtime application traffic and AI inference into independently deployable services
+- Combined PostgreSQL, PostGIS, pgvector, and source-aware retrieval for location-sensitive answers
+- Built secure cookie-based authentication, Redis sessions, WebSocket/STOMP chat, SSE, and Web Push
+- Reduced decoded image pixels by **88.9%** in a representative large-image processing case
+- Received the **Innovation Award** at the Shinhan Youth Hackathon
 
-## Featured Projects | 주요 프로젝트
+<a href="https://ieum.rktclgh.site"><img src="https://img.shields.io/badge/Explore_Ieum-111827?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Explore Ieum"/></a>
+<a href="https://github.com/rktclgh/ieum_BE"><img src="https://img.shields.io/badge/Backend_Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ieum backend repository"/></a>
 
-### [VlaInter](https://vlainter.rktclgh.site) — AI Interview Service
+## Selected projects | 주요 프로젝트
 
-**Solo Project · Backend / Infrastructure**
+| Project | What it is | Core stack |
+| --- | --- | --- |
+| [**Ieum**](https://github.com/rktclgh/ieum_BE) | Location-based community combining realtime services and RAG.<br/>실시간 서비스와 RAG를 결합한 위치 기반 커뮤니티 | Java · Spring Boot · PostgreSQL · PostGIS · pgvector · Redis |
+| [**VlaInter**](https://github.com/rktclgh/VlaInter_BE) | Personalized AI interview service built from uploaded career documents.<br/>경력 문서를 기반으로 개인화 질문을 생성하는 AI 면접 서비스 | Kotlin · Spring Boot · PostgreSQL · pgvector · Redis · Bedrock |
+| [**FairPlay**](https://github.com/rktclgh/FairPlay_BE) | Event reservation and operations platform with realtime communication.<br/>실시간 소통 기능을 갖춘 행사 예약·운영 플랫폼 | Java · Spring Boot · MySQL · Redis · WebSocket · SSE |
+| [**Codex Discord Agents**](https://github.com/rktclgh/Codex_Discord_Agents) | Local role-based multi-agent orchestration through Discord and Codex.<br/>Discord와 Codex를 연결한 역할 기반 로컬 멀티에이전트 도구 | Python · Discord · Codex CLI · tmux · Git |
 
-Designed and operated a backend that turns resumes, cover letters, and portfolios into personalized interview sessions through document extraction, chunking, embedding, retrieval, question generation, and answer evaluation.
+## Tech stack
 
-이력서·자기소개서·포트폴리오를 문서 추출, 청킹, 임베딩, 검색, 질문 생성, 답변 평가로 연결해 개인화된 면접 세션을 제공하는 백엔드를 설계하고 운영했습니다.
+#### Languages
 
-- PostgreSQL/pgvector-based RAG and Gemini → Amazon Bedrock provider fallback
-- Redis-backed HttpOnly cookie sessions, S3 document storage, OCR fallback, Docker deployment
-- Reduced session creation errors by **85.7%** and shortened representative question-generation time from **20.6s to 14.8s**
+<p>
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin"/>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+</p>
 
-`Kotlin` `Spring Boot` `PostgreSQL` `pgvector` `Redis` `Gemini` `Amazon Bedrock` `AWS` `Docker`
+#### Backend
 
-[Backend Repository](https://github.com/rktclgh/VlaInter_BE) · [Live Service](https://vlainter.rktclgh.site)
+<p>
+  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot"/>
+  <img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white" alt="Spring Security"/>
+  <img src="https://img.shields.io/badge/JPA-59666C?style=flat-square&logo=hibernate&logoColor=white" alt="JPA"/>
+  <img src="https://img.shields.io/badge/REST_API-111827?style=flat-square" alt="REST API"/>
+</p>
 
----
+#### Data & search
 
-### [Ieum](https://ieum.rktclgh.site) — Location-based Community Platform
+<p>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white" alt="Redis"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL"/>
+  <img src="https://img.shields.io/badge/pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="pgvector"/>
+  <img src="https://img.shields.io/badge/PostGIS-2E8B57?style=flat-square&logo=postgresql&logoColor=white" alt="PostGIS"/>
+</p>
 
-**Team Lead · Backend · Innovation Award, Shinhan Youth Hackathon**
+#### AI & retrieval
 
-Led backend development for a location-based community platform for international residents in Korea. The system separates real-time application traffic from AI inference and combines geospatial, vector, and knowledge-based retrieval.
+<p>
+  <img src="https://img.shields.io/badge/RAG-6D28D9?style=flat-square" alt="RAG"/>
+  <img src="https://img.shields.io/badge/Vector_Search-6D28D9?style=flat-square" alt="Vector Search"/>
+  <img src="https://img.shields.io/badge/Knowledge_Graph-4F46E5?style=flat-square" alt="Knowledge Graph"/>
+  <img src="https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" alt="Gemini"/>
+  <img src="https://img.shields.io/badge/Amazon_Bedrock-FF9900?style=flat-square&logo=amazonaws&logoColor=white" alt="Amazon Bedrock"/>
+</p>
 
-한국 거주 외국인을 위한 위치 기반 커뮤니티의 백엔드 개발을 이끌었습니다. 실시간 서비스 트래픽과 AI 추론 부하를 분리하고, 위치·벡터·지식 기반 검색을 결합했습니다.
+#### Realtime
 
-- Two-server architecture for REST/WebSocket/SSE workloads and AI inference
-- PostgreSQL with PostGIS and pgvector, Redis-backed sessions, secure HttpOnly cookie authentication
-- RAG pipeline combining semantic relevance, location context, and source reliability
-- Pre-decode image subsampling reduced decoded pixels by **88.9%** in a representative case
+<p>
+  <img src="https://img.shields.io/badge/WebSocket-111827?style=flat-square" alt="WebSocket"/>
+  <img src="https://img.shields.io/badge/STOMP-59666C?style=flat-square" alt="STOMP"/>
+  <img src="https://img.shields.io/badge/SSE-0284C7?style=flat-square" alt="Server-Sent Events"/>
+  <img src="https://img.shields.io/badge/Web_Push-0EA5E9?style=flat-square" alt="Web Push"/>
+</p>
 
-`Java` `Spring Boot` `PostgreSQL` `PostGIS` `pgvector` `Redis` `WebSocket` `SSE` `Spring AI` `Docker`
+#### Infrastructure & tooling
 
-[Backend Repository](https://github.com/rktclgh/ieum_BE) · [Live Service](https://ieum.rktclgh.site)
+<p>
+  <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white" alt="AWS"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white" alt="Nginx"/>
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
+  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare"/>
+  <img src="https://img.shields.io/badge/Testcontainers-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Testcontainers"/>
+</p>
 
----
+## Current focus | 현재 관심 분야
 
-### FairPlay — Event Reservation & Operations Platform
-
-**Team Lead · Backend**
-
-Built backend features for event reservation and operations, including real-time communication, notifications, authentication, administrative workflows, and an AI support chatbot.
-
-행사 예약과 운영을 위한 API, 인증·인가, 관리자 흐름, 실시간 채팅과 알림, AI 고객지원 챗봇을 구현했습니다.
-
-- WebSocket/STOMP real-time chat and SSE notifications
-- Redis-backed session and messaging flows
-- Gemini-based RAG chatbot and GitHub Actions deployment pipeline
-
-`Java` `Spring Boot` `MySQL` `Redis` `WebSocket` `STOMP` `SSE` `Gemini` `AWS`
-
-[Backend Repository](https://github.com/rktclgh/FairPlay_BE)
-
----
-
-### Codex Discord Agents — Local Multi-Agent Orchestration
-
-A local orchestration tool that routes Discord conversations to role-specific Codex sessions, maintains long-running context, exposes runtime state through tmux, and supports task tracking and scoped commits.
-
-Discord 대화를 역할별 Codex 세션으로 라우팅하고 장기 컨텍스트 유지, tmux 기반 관찰, 작업 추적과 범위 제한 커밋을 지원하는 로컬 멀티에이전트 도구입니다.
-
-`Python` `Discord` `Codex CLI` `tmux` `Git`
-
-[Repository](https://github.com/rktclgh/Codex_Discord_Agents)
-
----
-
-## Engineering Focus | 엔지니어링 관심사
-
-- **Backend architecture & domain modeling** — 백엔드 아키텍처와 도메인 모델링
-- **Authentication, session management & security** — 인증·세션 관리와 보안
-- **Real-time systems with WebSocket, STOMP and SSE** — 실시간 통신 시스템
-- **PostgreSQL, Redis, vector and geospatial search** — 데이터 처리와 검색
-- **RAG, LLM integration and provider failure handling** — AI 기능 통합과 실패 대응
-- **Deployment, observability and measurable optimization** — 배포·관측성과 수치 기반 최적화
-
----
-
-## Tech Stack
-
-| Area | Technologies |
-| --- | --- |
-| **Backend** | Kotlin, Java, Spring Boot, Spring Security, JPA/Hibernate, REST API |
-| **Data** | PostgreSQL, pgvector, PostGIS, Redis, MySQL |
-| **AI** | RAG, Vector Search, Spring AI, Gemini, Amazon Bedrock |
-| **Realtime** | WebSocket, STOMP, SSE, Web Push |
-| **Infrastructure** | AWS EC2/RDS/S3, Docker, Nginx, GitHub Actions, Cloudflare |
-
----
-
-## Contact | 연락
-
-- [Portfolio](https://www.rktclgh.site)
-- [Resume](https://www.rktclgh.site/resume)
-- [LinkedIn](https://www.linkedin.com/in/%EC%B9%98%ED%98%B8-%EC%86%A1-63b791390/)
+Backend Architecture · Reliable AI Integration · RAG & Retrieval · Agentic Development · Realtime Systems  
+백엔드 아키텍처 · 안정적인 AI 통합 · RAG와 검색 · 에이전틱 개발 · 실시간 시스템
